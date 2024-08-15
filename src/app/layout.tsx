@@ -7,8 +7,8 @@ import Provider from "@/components/theme/Provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Post Jop",
-  description: "Great! It looks like you're defining metadata for your project titled \"Post Jop.\" If you need any further assistance with your project or anything else, feel free to ask!",
+  title: "Hirfa Tech",
+  description: "Hirfa Tech is an educational platform focused on developing vocational and industrial skills through a variety of courses.",
 };
 
 export default function RootLayout({
