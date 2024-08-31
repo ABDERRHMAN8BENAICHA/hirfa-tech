@@ -1,5 +1,5 @@
 "use client"
-import { NavItem } from '@/const'
+import { NavItem } from '@/constants'
 import React from 'react'
 import { Button } from './ui/button'
 import ModeToggle from './ModeToggle'

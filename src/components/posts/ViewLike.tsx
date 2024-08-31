@@ -20,7 +20,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import Error from '../Error'
 import CardLike from './CardLike'
 import { Like, LikesResponse } from '@/types'
-import { API_URL } from '@/const'
+import { API_URL } from '@/constants'
 type Props = {
     NumberOfLike: number;
     PostId: string;

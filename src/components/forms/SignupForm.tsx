@@ -25,7 +25,7 @@ import { useRouter } from "next/navigation"
 import { useEdgeStore } from "@/lib/edgestore"
 import { SingleImageDropzone } from "@/components/SingleImageDropzone"
 import { Progress } from "@/components/progress"
-import { API_URL } from "@/const"
+import { API_URL } from "@/constants"
 
 
 

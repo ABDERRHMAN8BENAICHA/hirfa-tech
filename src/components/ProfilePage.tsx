@@ -10,7 +10,7 @@ import {
     AvatarImage,
 } from "@/components/ui/avatar"
 import { FaRegEdit } from 'react-icons/fa';
-import AddPost from './posts/AddPost';
+import AddPost from './posts/AddCourse';
 import { MdOutlinePostAdd } from 'react-icons/md';
 import ActionProfile from './buttons/ActionProfile';
 const ProfilePage = () => {

@@ -1,3 +1,118 @@
+// generator client {
+//   provider = "prisma-client-js"
+// }
+
+// datasource db {
+//   provider = "postgresql"
+//   url      = env("DATABASE_URL")
+// }
+// model Account {
+//   id                       String   @id @default(cuid())
+//   userId                   String   @unique(map: "Account_userId_key")
+//   type                     String
+//   provider                 String
+//   providerAccountId        String
+//   refresh_token            String?  @db.Text
+//   access_token             String?  @db.Text
+//   expires_at               Int?
+//   token_type               String?
+//   scope                    String?
+//   id_token                 String?  @db.Text
+//   session_state            String?
+//   refresh_token_expires_in Int?
+//   createdAt                DateTime @default(now())
+//   updatedAt                DateTime @updatedAt
+//   user                     User     @relation(fields: [userId], references: [id], map: "Account_userId_fkey")
+
+//   @@unique([provider, providerAccountId], map: "Account_provider_providerAccountId_key")
+//   @@index([userId], map: "Account_userId_idx")
+// }
+
+// model Authenticator {
+//   credentialID         String  @unique(map: "Authenticator_credentialID_key")
+//   userId               String
+//   providerAccountId    String
+//   credentialPublicKey  String
+//   counter              Int
+//   credentialDeviceType String
+//   credentialBackedUp   Boolean
+//   transports           String?
+//   user                 User    @relation(fields: [userId], references: [id], onDelete: Cascade, map: "Authenticator_userId_fkey")
+
+//   @@id([userId, credentialID])
+// }
+
+// model Session {
+//   id           String   @id @default(cuid())
+//   sessionToken String   @unique(map: "Session_sessionToken_key")
+//   userId       String
+//   expires      DateTime
+//   createdAt    DateTime @default(now())
+//   updatedAt    DateTime
+//   user         User     @relation(fields: [userId], references: [id], map: "Session_userId_fkey")
+
+//   @@index([userId], map: "Session_userId_idx")
+// }
+
+// model User {
+//   id            String          @id @default(cuid())
+//   name          String?
+//   username      String?         @unique(map: "User_username_key")
+//   email         String?         @unique(map: "User_email_key")
+//   emailVerified DateTime?
+//   image         String?
+//   createdAt     DateTime        @default(now())
+//   updatedAt     DateTime        @updatedAt
+//   address       String?
+//   password      String?
+//   phone         String?
+//   role          UserRole        @default(USER)
+//   account       Account?
+//   authenticator Authenticator[]
+//   session       Session[]
+//   course        Course[]
+// }
+
+// model VerificationToken {
+//   identifier String
+//   token      String
+//   expires    DateTime
+
+//   @@unique([identifier, token], map: "VerificationToken_identifier_token_key")
+// }
+
+// model Course {
+//   id          String   @id @default(cuid())
+//   title       String
+//   description String?
+//   instructorId String
+//   price       Float
+//   createdAt   DateTime @default(now())
+//   updatedAt   DateTime @updatedAt
+//   lesson      Lesson[]
+//   user        User     @relation(fields: [instructorId], references: [id], map: "Course_instructorId_fkey")
+
+//   @@index([instructorId], map: "Course_instructorId_idx")
+// }
+
+// model Lesson {
+//   id        String   @id @default(cuid())
+//   title     String
+//   content   String?
+//   videoUrl  String
+//   videoInfo String?
+//   courseId  String
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+//   course    Course   @relation(fields: [courseId], references: [id], map: "Lesson_courseId_fkey")
+
+//   @@index([courseId], map: "Lesson_courseId_idx")
+// }
+
+// enum UserRole {
+//   USER
+//   ADMIN
+// }
 generator client {
   provider = "prisma-client-js"
 }
@@ -6,6 +121,7 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 model Account {
   id                       String   @id @default(cuid())
   userId                   String   @unique(map: "Account_userId_key")
@@ -55,22 +171,22 @@ model Session {
 }
 
 model User {
-  id            String          @id @default(cuid())
-  name          String?
-  username      String?         @unique(map: "User_username_key")
-  email         String?         @unique(map: "User_email_key")
-  emailVerified DateTime?
-  image         String?
-  createdAt     DateTime        @default(now())
-  updatedAt     DateTime        @updatedAt
-  address       String?
-  password      String?
-  phone         String?
-  role          UserRole        @default(USER)
-  account       Account?
-  authenticator Authenticator[]
-  session       Session[]
-  course        Course[]
+  id             String          @id @default(cuid())
+  name           String?
+  username       String?         @unique(map: "User_username_key")
+  email          String?         @unique(map: "User_email_key")
+  emailVerified  DateTime?
+  image          String?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  address        String?
+  password       String?
+  phone          String?
+  role           UserRole        @default(USER)
+  accounts       Account[]
+  authenticators Authenticator[]
+  sessions       Session[]
+  courses        Course[]        @relation("UserCourses")
 }
 
 model VerificationToken {
@@ -82,17 +198,19 @@ model VerificationToken {
 }
 
 model Course {
-  id          String   @id @default(cuid())
-  title       String
-  description String?
-  instructorId String
-  price       Float
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  lesson      Lesson[]
-  user        User     @relation(fields: [instructorId], references: [id], map: "Course_instructorId_fkey")
-
-  @@index([instructorId], map: "Course_instructorId_idx")
+  id            String   @id @default(cuid())
+  title         String
+  description   String?
+  image         String?
+  price         Float
+  discount      Float?
+  numberOfStars Float?
+  published     Boolean  @default(false)
+  isFree        Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  lessons       Lesson[] // Many-to-one or many-to-many as needed
+  users         User[]   @relation("UserCourses")
 }
 
 model Lesson {
@@ -102,6 +220,7 @@ model Lesson {
   videoUrl  String
   videoInfo String?
   courseId  String
+  isFree    Boolean  @default(false) // تحديد ما إذا كان الدرس مجاني
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   course    Course   @relation(fields: [courseId], references: [id], map: "Lesson_courseId_fkey")

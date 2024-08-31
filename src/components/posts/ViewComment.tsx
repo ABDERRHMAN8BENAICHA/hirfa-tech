@@ -18,7 +18,7 @@ import { Separator } from "@/components/ui/separator"
 import CardComment from './CardComment'
 import Error from '../Error'
 import { Comment, CommentsResponse } from '@/types'
-import { API_URL } from '@/const'
+import { API_URL } from '@/constants'
 
 type Props = {
     PostId: string;

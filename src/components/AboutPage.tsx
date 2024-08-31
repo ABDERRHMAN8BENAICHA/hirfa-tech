@@ -1,4 +1,4 @@
-import { aboutContent } from '@/const/index';
+import { aboutContent } from '@/constants/index';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';

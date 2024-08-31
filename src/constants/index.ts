@@ -1,7 +1,8 @@
 import { AboutContent, AboutType, FooterItemType, HeroCardType, NavItemType } from "@/types";
 import { FaFile } from "react-icons/fa6";
-import { BiSolidVector } from "react-icons/bi";
-import { TbMaximize } from "react-icons/tb";
+import { FaLaptopCode, FaChalkboardTeacher } from 'react-icons/fa'
+import { BiBookContent } from 'react-icons/bi'
+import { TbCertificate } from 'react-icons/tb'
 import { RiSendPlaneFill } from "react-icons/ri";
 import { IoGrid, IoMail } from "react-icons/io5";
 import { LuCodesandbox, LuGitPullRequest } from "react-icons/lu";
@@ -28,78 +29,67 @@ export const NavItem: NavItemType[] = [
 
 export const HeroCardInfo: HeroCardType[] = [
     {
-        icon: FaFile,
-        title: "A1 Cover Letter Generator",
-        content: `The A1 Cover Letter Generator is a tool
-that uses artificial intelligence
-algorithms to create personalized cover
-letters for job applicants.`,
+        icon: FaLaptopCode,
+        title: "Interactive Coding Labs",
+        content: `Interactive Coding Labs provide hands-on coding exercises and projects. 
+                Learn by doing and get real-time feedback to enhance your programming skills.`,
     },
     {
-        icon: BiSolidVector,
-        title: "Smart Personalization",
-        content: `Smart Personalization refers to the use
-of data and technology to deliver
-tailored experiences and content to
-individual customers or users.`
-    }, {
-        icon: TbMaximize,
-        title: "Resume Scanner",
-        content: `A resume scanner is a software
-application that uses optical character
-recognition (OCR) technology to
-extract and analyze data from resumes.`
-    }
+        icon: FaChalkboardTeacher,
+        title: "Expert-Led Tutorials",
+        content: `Expert-Led Tutorials feature in-depth lessons from industry professionals. 
+                Gain insights and knowledge directly from experts in the field.`,
+    },
+    {
+        icon: BiBookContent,
+        title: "Comprehensive Learning Materials",
+        content: `Comprehensive Learning Materials include ebooks, articles, and resources 
+                  designed to support and enrich your technical education.`,
+    },
 ]
 
 export const AboutInfo: AboutType[] = [
     {
         icon: FaFile,
-        title: "Cover Letter",
-        content: `A cover letter is a document that
-accompanies a job application and is
-written to introduce the applicant to the
-employer.`,
+        title: "Cover Letters",
+        content: `A cover letter is a document that accompanies a job application, 
+        introducing the applicant to the employer and highlighting key aspects 
+        of their qualifications and experiences.`,
     },
     {
         icon: IoMail,
         title: "Resignation Letters",
-        content: `A resignation letter is a formal
-document that an employee writes to
-inform their employer of their decision
-to leave the company.`,
+        content: `A resignation letter is a formal document an employee writes to 
+        notify their employer of their decision to leave the company. It typically 
+        includes the last working day and a brief reason for departure.`,
     },
     {
         icon: LuGitPullRequest,
-        title: "Connection Request",
-        content: `A connection request is a message sent
-on a social networking site, such as
-LinkedIn, requesting to connect with
-another user.`,
+        title: "Connection Requests",
+        content: `A connection request is a message sent on professional networking 
+        sites, like LinkedIn, to request a connection with another user. It’s 
+        an essential tool for expanding your professional network.`,
     },
     {
         icon: RiSendPlaneFill,
         title: "Outreach Emails",
-        content: `Outreach emails are messages sent by
-individuals or businesses to introduce
-themselves, establish a connection, or
-propose a collaboration.`,
+        content: `Outreach emails are messages sent by individuals or businesses 
+        to introduce themselves, establish connections, or propose collaborations. 
+        They are crucial for networking and business development.`,
     },
     {
         icon: IoGrid,
         title: "Resume Optimization",
-        content: `Smart Personalization refers to the use
-of data and technology to deliver
-tailored experiences and content to
-individual customers or users.`,
+        content: `Resume optimization involves tailoring a resume to improve its 
+        effectiveness by using keywords and formatting techniques that align 
+        with job descriptions and applicant tracking systems.`,
     },
     {
         icon: LuCodesandbox,
         title: "Resume Design",
-        content: `A resume scanner is a software
-application that uses optical character
-recognition (OCR) technology to
-extract and analyze data from resumes.`,
+        content: `Resume design focuses on the visual presentation of a resume, 
+        ensuring it is aesthetically pleasing and easy to read. Good design 
+        enhances readability and helps make a strong first impression.`,
     },
 ]
 
@@ -236,21 +226,23 @@ export const FooterItem: FooterItemType[] = [
 export const aboutContent: AboutContent = {
     title: "About Us",
     description: `
-Welcome to Post-Jop! Our mission is to connect university students with amazing job opportunities and provide a platform that bridges the gap between employers and young talents.
-Our platform offers a variety of features to make your job search and recruitment process as smooth and efficient as possible:
-      - **Job Listings**: Browse through a wide range of job listings tailored specifically for university students.
-      - **Profile Management**: Create and manage your professional profile to attract potential employers.
-      - **Application Tracking**: Keep track of your job applications and their statuses in one place.
-      - **Employer Interaction**: Communicate directly with employers to learn more about job opportunities and company culture.
-      - **Career Resources**: Access valuable resources and tips to help you prepare for your job search and interviews.
-At Post-Jop, we are committed to helping you achieve your career goals and make the most of your university experience. Join us today and take the first step towards your dream job!
+Welcome to TechCourses! Our mission is to provide a comprehensive platform for discovering and enrolling in technical courses. Whether you're looking to enhance your skills, switch careers, or dive into the tech world, we've got you covered. 
+
+Our platform offers a range of features designed to streamline your learning journey:
+- **Course Listings**: Explore a diverse array of technical courses, from coding and data science to cybersecurity and cloud computing.
+- **Course Management**: Enroll in and manage your courses with ease, tracking your progress and accessing course materials in one place.
+- **Instructor Interaction**: Engage with instructors directly to get the most out of your learning experience.
+- **Learning Resources**: Access a wealth of resources, including tutorials, articles, and tips to support your educational journey.
+- **Community Engagement**: Connect with fellow learners and professionals to share knowledge and opportunities.
+
+At TechCourses, we're dedicated to helping you advance your technical skills and achieve your career aspirations. Join us today and start your path to success!
     `,
     team: [
         {
             name: "Ben Aicha Abderrhmane",
             role: "Founder & CEO",
             image: "/images/team/dahmane.jpg",
-            bio: "John is a passionate entrepreneur with a background in technology and education. He founded Post-Jop to help students connect with meaningful job opportunities.",
+            bio: "Ben Aicha is a visionary entrepreneur with a passion for technology and education. He founded TechCourses to bridge the gap between learners and cutting-edge technical education.",
             social: {
                 instagram: "https://www.instagram.com/7dx.d/",
                 linkedin: "https://www.linkedin.com/in/abderrhmane-ben-aicha/",
@@ -274,13 +266,14 @@ export function getInitials(name: string): string {
     return `${firstNameInitial}${lastNameInitial}`;
 }
 
-export function formatDateTime(dateTimeString: string): string {
-    const dateTime = new Date(dateTimeString);
-    const year = dateTime.getFullYear();
-    const month = (dateTime.getMonth() + 1).toString().padStart(2, '0');
-    const day = dateTime.getDate().toString().padStart(2, '0');
-    const hours = dateTime.getHours().toString().padStart(2, '0');
-    const minutes = dateTime.getMinutes().toString().padStart(2, '0');
-    const seconds = dateTime.getSeconds().toString().padStart(2, '0');
-    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+function getDateComponents(dateString: string) {
+    const date = new Date(dateString);
+
+    const day = date.getUTCDate();
+    const month = date.getUTCMonth() + 1; // Months are zero-based, so add 1
+    const year = date.getUTCFullYear();
+
+    return { day, month, year };
 }
+
+

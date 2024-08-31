@@ -173,7 +173,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
 import { Button } from '../ui/button'
 import { useRouter } from 'next/navigation'
-import { API_URL } from '@/const'
+import { API_URL } from '@/constants'
 import { FaRegEdit } from 'react-icons/fa'
 import Error from '../Error'
 import GoBack from '../buttons/GoBack'

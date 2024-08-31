@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import { Button } from '../ui/button'
-import { API_URL } from '@/const'
+import { API_URL } from '@/constants'
 import { useRouter } from 'next/navigation';
 import { FaHeart, FaRegHeart } from 'react-icons/fa6';
 import { toast } from "@/components/ui/use-toast"

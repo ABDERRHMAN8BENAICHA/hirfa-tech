@@ -19,7 +19,7 @@ import {
 import Image from 'next/image'
 import CopyButoon from '../buttons/CopyButoon'
 import { Post } from '@/types'
-import { API_URL, formatDateTime, getInitials } from '@/const'
+import { API_URL, formatDateTime, getInitials } from '@/constants'
 import { useSession } from 'next-auth/react'
 import { usePathname, useRouter } from 'next/navigation'
 import ActionCard from '../buttons/ActionCard'

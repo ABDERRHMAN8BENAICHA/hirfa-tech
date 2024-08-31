@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { CopyIcon } from 'lucide-react';
 import { usePathname } from 'next/navigation';
-import { SITE_URL } from '@/const';
+import { SITE_URL } from '@/constants';
 type Props = {
     id: string
 }

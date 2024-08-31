@@ -24,7 +24,7 @@ import {
     AvatarFallback,
     AvatarImage,
 } from "@/components/ui/avatar"
-import { formatDateTime, getInitials } from '@/const'
+import { formatDateTime, getInitials } from '@/constants'
 import ActionComment from '../buttons/ActionComment'
 import { useSession } from 'next-auth/react'
 

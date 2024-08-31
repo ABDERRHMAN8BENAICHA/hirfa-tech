@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import LogoDark from "@/const/LogoDark.svg"
-import LogoLight from "@/const/LogoLight.svg"
+import LogoDark from "@/constants/LogoDark.svg"
+import LogoLight from "@/constants/LogoLight.svg"
 
 type Props = {}
 

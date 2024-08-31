@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sheet"
 import { LuMenu } from 'react-icons/lu'
 import Logo from './Logo'
-import { NavItem } from '@/const'
+import { NavItem } from '@/constants'
 import { usePathname } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'

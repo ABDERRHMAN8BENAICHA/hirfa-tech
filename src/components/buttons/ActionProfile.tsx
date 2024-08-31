@@ -20,9 +20,9 @@ export default async function ActionProfile({ role }: Props) {
     }
     return (
         <Button variant="outline">
-            <Link href={`/create-post`} className='flex w-full justify-between items-center'>
+            <Link href={`/create-course`} className='flex w-full justify-between items-center space-x-2'>
                 <div>
-                    <h1> Add Post </h1>
+                    <h1> Add Course </h1>
                 </div>
                 <div>
                     <MdOutlinePostAdd className='w-6 h-6' />

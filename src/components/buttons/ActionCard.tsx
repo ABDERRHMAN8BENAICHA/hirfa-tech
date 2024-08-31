@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button"
 import { FaRegEdit } from "react-icons/fa"
 import { IoEllipsisVerticalSharp } from "react-icons/io5"
 import { useRouter } from "next/navigation"
-import { API_URL } from "@/const"
+import { API_URL } from "@/constants"
 import { toast } from "@/components/ui/use-toast"
 import { MdDeleteForever } from "react-icons/md"
 
