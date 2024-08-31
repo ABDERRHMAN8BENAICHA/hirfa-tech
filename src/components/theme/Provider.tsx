@@ -1,7 +1,7 @@
 import { SessionProvider } from 'next-auth/react'
 import { ThemeProvider as NextThemesProvider } from "next-themes"
-import { EdgeStoreProvider } from '@/lib/edgestore';
 import React from 'react'
+import { EdgeStoreProvider } from '../../lib/edgestore'
 
 type Props = {
   children: React.ReactNode
