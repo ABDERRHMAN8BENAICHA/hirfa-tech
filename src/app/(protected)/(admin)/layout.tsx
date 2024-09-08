@@ -10,7 +10,7 @@ type Props = {
 
 export default async function layout({ children }: Props) {
     const session = await auth();
-    if (!session?.user) {
+    if (!(session?.user.role == "ADMIN")) {
         redirect("/")
     }
     return (

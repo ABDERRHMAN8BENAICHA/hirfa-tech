@@ -2,11 +2,9 @@ import { AboutContent, AboutType, FooterItemType, HeroCardType, NavItemType } fr
 import { FaFile } from "react-icons/fa6";
 import { FaLaptopCode, FaChalkboardTeacher } from 'react-icons/fa'
 import { BiBookContent } from 'react-icons/bi'
-import { TbCertificate } from 'react-icons/tb'
 import { RiSendPlaneFill } from "react-icons/ri";
 import { IoGrid, IoMail } from "react-icons/io5";
 import { LuCodesandbox, LuGitPullRequest } from "react-icons/lu";
-export const SITE_URL = "http://localhost:3000/";
 export const API_URL = process.env.NEXT_PUBLIC_API_URL;
 export const NavItem: NavItemType[] = [
     {
