@@ -15,9 +15,9 @@ export default async function layout({ children }: Props) {
     }
     return (
         <div>
-            <NavBar />
+            {/* <NavBar /> */}
             {children}
-            <Footer />
+            {/* <Footer /> */}
         </div>
     )
 }

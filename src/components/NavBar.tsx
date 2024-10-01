@@ -29,7 +29,7 @@ export default function NavBar({ }: Props) {
                 {!session.data?.user ? (
                     <>
                         <Button className='border-green-400 hidden md:block' variant="outline"><Link href={"/login"}>Sign Up</Link></Button>
-                        <Button variant="default" className='hidden md:block'>Get Started</Button>
+                        <Link href={"/login"}><Button variant="default" className='hidden md:block'>Get Started</Button></Link>
                     </>
                 ) : (
                     <Link href={"/profile"} >

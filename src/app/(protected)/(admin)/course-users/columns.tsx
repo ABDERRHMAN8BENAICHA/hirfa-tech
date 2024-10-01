@@ -133,9 +133,6 @@ export const userColumns: ColumnDef<User | any>[] = [
                             Copy User ID
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem onClick={() => {
-                            DeleteUser(user.id)
-                        }}>DELETE</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             )
@@ -145,29 +142,29 @@ export const userColumns: ColumnDef<User | any>[] = [
 
 
 
-export async function DeleteUser(userId: string) {
-    const searchParams = useSearchParams()
+// export async function DeleteUser(userId: string) {
+//     const searchParams = useSearchParams()
 
-    const courseId = searchParams.get('courseId')
-    try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/courses/${courseId}/disconnect`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ userId }),
-        });
+//     const courseId = searchParams.get('courseId')
+//     try {
+//         const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/courses/${courseId}/disconnect`, {
+//             method: 'DELETE',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify({ userId }),
+//         });
 
-        if (!response.ok) {
-            throw new Error('Failed to delete course');
-        }
+//         if (!response.ok) {
+//             throw new Error('Failed to delete course');
+//         }
 
-        // Optionally, refresh the data or provide feedback
-        console.log('Course deleted successfully');
-        // You might want to trigger a re-fetch of the course data or update local state here
+//         // Optionally, refresh the data or provide feedback
+//         console.log('Course deleted successfully');
+//         // You might want to trigger a re-fetch of the course data or update local state here
 
-    } catch (error) {
-        console.error('Error deleting course:', error);
-        // Handle error appropriately, e.g., show an alert to the user
-    }
-}
+//     } catch (error) {
+//         console.error('Error deleting course:', error);
+//         // Handle error appropriately, e.g., show an alert to the user
+//     }
+// }

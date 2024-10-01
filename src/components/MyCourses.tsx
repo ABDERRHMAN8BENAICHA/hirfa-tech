@@ -24,9 +24,11 @@ export default function MyCourses({ id }: MyCoursesProps) {
 
     useEffect(() => {
         const fetchCourses = async () => {
-            const response = await fetch(`/api/courses/${id}/my-courses`);
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/courses/${id}/profile`);
             const data = await response.json();
-            setCourses(data.courses);
+            if(data.ok){
+                setCourses(data.courses);
+            }
         };
 
         fetchCourses();
@@ -46,11 +48,11 @@ export default function MyCourses({ id }: MyCoursesProps) {
                         />
                     </div>
                     <div className="mt-4 px-5 pb-5">
-                        <Link href={`/courses/${course.id}`}>
+                        <Link href={`/view-course/${course.id}`}>
                             <h5 className="text-xl tracking-tight text-slate-900">{course.title}</h5>
                         </Link>
                     </div>
-                    <Link href={`/courses/${course.id}`}>
+                    <Link href={`/view-course/${course.id}?userId=${id}`}>
                         <Button className="w-full space-x-2" variant="outline">
                             <span>Go to Course</span>
                             <CiLocationArrow1 className="w-[20px] h-[20px] font-bold" />

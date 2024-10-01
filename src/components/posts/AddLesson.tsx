@@ -131,10 +131,9 @@ export default function AddLesson({ courseId }: Props) {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    image: videoUrl,
                     title: data.title,
                     content: data.content,
-                    videoUrl: data.videoUrl,
+                    videoUrl: videoUrl,
                     videoInfo: data.videoInfo,
                     courseId: data.courseId,
                     isFree: data.isFree,
@@ -197,23 +196,6 @@ export default function AddLesson({ courseId }: Props) {
                                                     <Textarea
                                                         placeholder="Lesson Content"
                                                         className="resize-none w-full h-40"
-                                                        {...field}
-                                                        disabled={loading}
-                                                    />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
-                                    <FormField
-                                        control={form.control}
-                                        name="videoUrl"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel>Video URL</FormLabel>
-                                                <FormControl>
-                                                    <Input
-                                                        placeholder="Video URL"
                                                         {...field}
                                                         disabled={loading}
                                                     />
