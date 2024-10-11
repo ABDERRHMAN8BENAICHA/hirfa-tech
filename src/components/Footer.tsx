@@ -16,8 +16,7 @@ export default function Footer({ }: Props) {
                         </div>
 
                         <p className="max-w-md mx-auto mt-6 text-center text-gray-400 sm:max-w-xs sm:mx-0 sm:text-left">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-                            consequuntur amet culpa cum itaque neque.
+                            At Hirfa Tech, we offer a variety of hands-on technical courses designed to equip you with the skills needed in today {"'"}s fast-paced industries. Join us to enhance your expertise and build a successful career.
                         </p>
 
                         <ul className="flex justify-center gap-6 mt-8 md:gap-8 sm:justify-start">
@@ -76,15 +75,7 @@ export default function Footer({ }: Props) {
                                         href="#"
                                         className="text-gray-500 hover:text-gray-400"
                                     >
-                                        Products
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="text-gray-500 hover:text-gray-400"
-                                    >
-                                        Blog
+                                        Courses
                                     </a>
                                 </li>
                                 <li>

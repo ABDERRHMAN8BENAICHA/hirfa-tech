@@ -21,7 +21,9 @@ export default function RootLayout({
       <body className={cn(inter.className, "")}>
         <Provider >
           {children}
-          <Toaster />
+          <Toaster 
+            
+          />
         </Provider>
       </body>
     </html>

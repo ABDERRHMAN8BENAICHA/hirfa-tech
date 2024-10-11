@@ -250,7 +250,7 @@ const LoginForm = () => {
                 </Form>
                 <div className="flex justify-center items-center gap-4 w-full">
                     <SingnInGoogle />
-                    <SingnInGithub />
+                    {/* <SingnInGithub /> */}
                 </div>
             </CardContent>
         </Card>

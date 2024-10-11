@@ -1,8 +1,8 @@
 import React from 'react';
-import { FaWhatsapp } from 'react-icons/fa'; // Import the WhatsApp icon
 import { IoLogoWhatsapp } from 'react-icons/io'; // Import the WhatsApp icon for the Button component
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import { auth } from '@/auth'
 
 type Props = {
     courseId: string;
@@ -15,7 +15,10 @@ type Props = {
     courseNumberOfStars: number | null;
 };
 
-const ContactButton = ({ courseId, userId, courseTitle, courseDescription, courseImage, coursePrice, courseDiscount, courseNumberOfStars }: Props) => {
+const ContactButton = async ({ courseId, userId, courseTitle, courseDescription, courseImage, coursePrice, courseDiscount, courseNumberOfStars }: Props) => {
+    // Get the session outside of the return
+    const session = await auth();
+
     // الرسالة المخصصة
     const message = `مرحبًا، أود التحدث بخصوص الكورس.\n*معرف المستخدم:* ${userId}\n*عنوان الكورس:* ${courseTitle}\n*وصف الكورس:* ${courseDescription}\n*سعر الكورس:* ${coursePrice} \n*الخصم:* ${courseDiscount ? courseDiscount : 'لا يوجد'}\n*عدد النجوم:* ${courseNumberOfStars ? courseNumberOfStars : 'غير متوفر'}.`;
 
@@ -27,17 +30,24 @@ const ContactButton = ({ courseId, userId, courseTitle, courseDescription, cours
 
     return (
         <div className="flex items-center space-x-4">
-            <Link
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4"
-            >
-                <Button className="w-40 flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded space-x-4">
-                    <span>Buy</span>
-                    <IoLogoWhatsapp className='w-[20px] h-[20px]' />
-                </Button>
-            </Link>
+            {session?.user ? (
+                <Link
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Button className="w-40 flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded space-x-4">
+                        <span>Buy</span>
+                        <IoLogoWhatsapp className='w-[20px] h-[20px]' />
+                    </Button>
+                </Link>
+            ) : (
+                <Link href="/login">
+                    <Button className="w-40 flex ml-auto text-white bg-gray-500 border-0 py-2 px-6 focus:outline-none hover:bg-gray-600 rounded">
+                        <span>Log In</span>
+                    </Button>
+                </Link>
+            )}
         </div>
     );
 };

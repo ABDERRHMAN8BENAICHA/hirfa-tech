@@ -245,7 +245,7 @@ export default function SignupForm() {
                     </div>
                     <div className="flex justify-center items-center gap-4 w-full">
                         <SingnInGoogle isloading={loading} />
-                        <SingnInGithub isloading={loading} />
+                        {/* <SingnInGithub isloading={loading} /> */}
                     </div>
                 </Form>
             </CardContent>
