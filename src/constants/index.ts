@@ -42,7 +42,7 @@ export const HeroCardInfo: HeroCardType[] = [
         icon: BiBookContent,
         title: "Comprehensive Learning Materials",
         content: `Comprehensive Learning Materials include ebooks, articles, and resources 
-                  designed to support and enrich your technical education.`,
+        designed to support and enrich your technical education.`,
     },
 ]
 
@@ -50,46 +50,35 @@ export const AboutInfo: AboutType[] = [
     {
         icon: FaFile,
         title: "Cover Letters",
-        content: `A cover letter is a document that accompanies a job application, 
-        introducing the applicant to the employer and highlighting key aspects 
-        of their qualifications and experiences.`,
+        content: `A cover letter introduces the applicant to the employer and highlights key qualifications.`,
     },
     {
         icon: IoMail,
         title: "Resignation Letters",
-        content: `A resignation letter is a formal document an employee writes to 
-        notify their employer of their decision to leave the company. It typically 
-        includes the last working day and a brief reason for departure.`,
+        content: `A resignation letter notifies the employer of an employee's decision to leave and includes the last working day.`,
     },
     {
         icon: LuGitPullRequest,
         title: "Connection Requests",
-        content: `A connection request is a message sent on professional networking 
-        sites, like LinkedIn, to request a connection with another user. It’s 
-        an essential tool for expanding your professional network.`,
+        content: `A connection request on platforms like LinkedIn helps expand professional networks.`,
     },
     {
         icon: RiSendPlaneFill,
         title: "Outreach Emails",
-        content: `Outreach emails are messages sent by individuals or businesses 
-        to introduce themselves, establish connections, or propose collaborations. 
-        They are crucial for networking and business development.`,
+        content: `Outreach emails introduce individuals or businesses and are used for networking and collaboration.`,
     },
     {
         icon: IoGrid,
         title: "Resume Optimization",
-        content: `Resume optimization involves tailoring a resume to improve its 
-        effectiveness by using keywords and formatting techniques that align 
-        with job descriptions and applicant tracking systems.`,
+        content: `Resume optimization improves effectiveness by aligning with job descriptions and applicant tracking systems.`,
     },
     {
         icon: LuCodesandbox,
         title: "Resume Design",
-        content: `Resume design focuses on the visual presentation of a resume, 
-        ensuring it is aesthetically pleasing and easy to read. Good design 
-        enhances readability and helps make a strong first impression.`,
+        content: `Resume design ensures that resumes are aesthetically pleasing and easy to read, making a strong impression.`,
     },
 ]
+
 
 export const FooterItem: FooterItemType[] = [
     {
