@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster"
 import Provider from "@/components/theme/Provider";
 const inter = Inter({ subsets: ["latin"] });
-
+import { Analytics } from "@vercel/analytics/react"
 export const metadata: Metadata = {
   title: "Hirfa Tech",
   description: "Hirfa Tech is an educational platform focused on developing vocational and industrial skills through a variety of courses.",
